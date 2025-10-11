@@ -261,20 +261,23 @@ export default function Projects({ isDark }: ProjectsProps) {
 
                   {/* Buttons */}
                   <div className="flex space-x-3 mt-4">
-                    <motion.a
-                      href={project.liveUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      whileHover={{ scale: 1.05, y: -2 }}
-                      className={`flex items-center px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
-                        isDark
-                          ? "bg-amber-400 text-slate-900 hover:bg-amber-300"
-                          : "bg-blue-600 text-white hover:bg-blue-700"
-                      }`}
-                    >
-                      <ExternalLink size={14} className="mr-2" />
-                      View Live
-                    </motion.a>
+                    {project.liveUrl && (
+                      <motion.a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        whileHover={{ scale: 1.05, y: -2 }}
+                        className={`flex items-center px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
+                          isDark
+                            ? "bg-amber-400 text-slate-900 hover:bg-amber-300"
+                            : "bg-blue-600 text-white hover:bg-blue-700"
+                        }`}
+                      >
+                        <ExternalLink size={14} className="mr-2" />
+                        View Live
+                      </motion.a>
+                    )}
+
                     {project.githubUrl && (
                       <motion.a
                         href={project.githubUrl}
