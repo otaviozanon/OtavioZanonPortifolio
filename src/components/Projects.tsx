@@ -75,7 +75,7 @@ export default function Projects({ isDark }: ProjectsProps) {
       description:
         "Web application that allows users to upload files to multiple online hosting providers seamlessly. It uses APIs to handle file uploads with progress tracking, automatic retries on failures, and expiration management, providing a reliable and user-friendly experience.",
       tech: ["React", "TypeScript", "Next.js", "TailwindCSS", "XMLHttpRequest"],
-      liveUrl: "https://settfile.vercel.app",
+      liveUrl: "https://settfile.onrender.com/",
       githubUrl: "https://github.com/otaviozanon/settfile",
       year: "2025",
       team: "Solo",
