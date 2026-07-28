@@ -1,17 +1,43 @@
+/**
+ * About Component
+ *
+ * Displays professional introduction and contact information.
+ *
+ * Features:
+ * - Animated entrance with Framer Motion
+ * - Multi-language support (PT-BR/EN-US)
+ * - Professional summary and experience highlights
+ * - Links to LinkedIn and GitHub
+ * - Email contact information
+ * - Stagger animation for smooth reveal
+ *
+ * @component
+ * @example
+ * ```tsx
+ * <About isDark={false} />
+ * ```
+ */
+
 import { motion, easeOut } from "framer-motion";
+import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 
 interface AboutProps {
+  /** Whether dark mode is currently active */
   isDark: boolean;
 }
 
 export default function About({ isDark }: AboutProps) {
+  const { t } = useTranslation();
+  const navigate = useNavigate();
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.3,
+        staggerChildren: 0.15,
+        delayChildren: 0.2,
       },
     },
   };
@@ -32,69 +58,105 @@ export default function About({ isDark }: AboutProps) {
     <motion.section
       id="about"
       aria-labelledby="about-title"
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 0.8 }}
-      viewport={{ once: true, amount: 0.3 }}
-      className={`py-20 px-6 lg:px-12 transition-colors duration-300 ${
-        isDark ? "bg-slate-800" : "bg-white"
+      className={`pb-4 transition-colors duration-300 ${
+        isDark ? "bg-black" : "bg-white"
       }`}
     >
       <motion.div
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-        className="max-w-4xl mx-auto"
+        viewport={{ once: true, amount: 0.2 }}
       >
-        <motion.div variants={itemVariants} className="mb-16">
-          <motion.h2
+        <motion.div variants={itemVariants} className="mb-8">
+          <motion.h1
             id="about-title"
-            className={`text-3xl font-bold mb-4 transition-colors duration-300 ${
-              isDark ? "text-white" : "text-slate-900"
+            className={`text-3xl md:text-4xl font-semibold mb-4 transition-colors duration-300 ${
+              isDark ? "text-white" : "text-black"
             }`}
-            whileHover={{ x: 10 }}
+            whileHover={{
+              scale: 1.02,
+              transition: { duration: 0.2 },
+            }}
           >
-            About Me
-          </motion.h2>
-          <motion.div
-            className={`w-20 h-1 rounded-full transition-colors duration-300 ${
-              isDark ? "bg-amber-400" : "bg-blue-600"
-            }`}
-            initial={{ width: 0 }}
-            whileInView={{ width: 80 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-          />
+            {t("about.title")}
+          </motion.h1>
         </motion.div>
 
-        <div className="space-y-8">
+        <motion.div variants={itemVariants}>
           <motion.p
-            variants={itemVariants}
-            className={`text-base md:text-lg leading-relaxed transition-colors duration-300 ${
-              isDark ? "text-slate-300" : "text-slate-600"
+            className={`text-base leading-relaxed mb-5 transition-colors duration-300 ${
+              isDark ? "text-neutral-300" : "text-neutral-700"
             }`}
           >
-            Experienced Front-End Developer with over 7 years of expertise in
-            Web Development and Process Optimization. Proficient in a broad
-            range of technologies and equipped with a flexible, adaptable skill
-            set. A collaborative team player who is goal-driven, responsible,
-            and proactive — always eager to expand knowledge, explore new
-            technologies, and continuously grow. Committed to being a key
-            contributor to team success.
+            {t("about.description1")}
+            <br />
+            <br />
+            {t("about.description2")}
+            <br />
+            <br />
+            {t("about.links.text")}{" "}
+            <motion.a
+              href="https://linkedin.com/in/otavio-zanon-820512183"
+              rel="noopener noreferrer"
+              target="_blank"
+              className={`font-bold transition-colors duration-300 ${
+                isDark ? "text-white" : "text-black"
+              }`}
+              whileHover={{
+                scale: 1.05,
+                textDecoration: "underline",
+                transition: { duration: 0.2 },
+              }}
+              style={{ display: "inline-block" }}
+            >
+              {t("about.links.linkedin")}
+            </motion.a>{" "}
+            {t("about.links.and")}{" "}
+            <motion.a
+              href="https://github.com/otaviozanon/"
+              rel="noopener noreferrer"
+              target="_blank"
+              className={`font-bold transition-colors duration-300 ${
+                isDark ? "text-white" : "text-black"
+              }`}
+              whileHover={{
+                scale: 1.05,
+                textDecoration: "underline",
+                transition: { duration: 0.2 },
+              }}
+              style={{ display: "inline-block" }}
+            >
+              {t("about.links.github")}
+            </motion.a>
+            .
+            <br />
+            <br />
+            {t("about.cta.text")}{" "}
+            <motion.button
+              onClick={() => navigate("/contact")}
+              className={`font-bold transition-colors duration-300 ${
+                isDark ? "text-white" : "text-black"
+              }`}
+              whileHover={{
+                scale: 1.05,
+                textDecoration: "underline",
+                transition: { duration: 0.2 },
+              }}
+              style={{
+                display: "inline-block",
+                background: "none",
+                border: "none",
+                padding: 0,
+                cursor: "pointer",
+                font: "inherit",
+              }}
+            >
+              {t("about.cta.link")}
+            </motion.button>
+            .
           </motion.p>
-
-          <motion.div
-            variants={itemVariants}
-            whileHover={{ scale: 1.02, y: -2 }}
-            className={`inline-flex px-6 py-3 rounded-lg text-sm font-medium transition-all duration-300 pt-4 ${
-              isDark
-                ? "bg-slate-700 text-amber-400 shadow-lg"
-                : "bg-slate-100 text-blue-600 shadow-md"
-            }`}
-          >
-            💡 Always learning, always growing
-          </motion.div>
-        </div>
+        </motion.div>
       </motion.div>
     </motion.section>
   );

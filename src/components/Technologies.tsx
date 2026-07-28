@@ -1,25 +1,161 @@
+/**
+ * Technologies Component
+ *
+ * Displays technical skills organized by category with proficiency levels.
+ *
+ * Features:
+ * - Categorized tech stack (languages, frontend, styling, backend, databases, cloud, tools)
+ * - Colored icons for each technology
+ * - Animated progress bars on scroll into view
+ * - Multi-language category labels
+ * - Stagger animation for smooth reveal
+ * - Responsive grid layout
+ *
+ * @component
+ * @example
+ * ```tsx
+ * <Technologies isDark={true} />
+ * ```
+ */
+
 import { motion, easeOut } from "framer-motion";
+import { useTranslation } from "react-i18next";
+import { useMemo } from "react";
+import {
+  SiJavascript,
+  SiTypescript,
+  SiPython,
+  SiReact,
+  SiAngular,
+  SiNextdotjs,
+  SiRedux,
+  SiBootstrap,
+  SiTailwindcss,
+  SiAntdesign,
+  SiLess,
+  SiNodedotjs,
+  SiMysql,
+  SiPostgresql,
+  SiSqlite,
+  SiSupabase,
+  SiFirebase,
+  SiCloudflare,
+  SiVercel,
+  SiGit,
+  SiVite,
+} from "react-icons/si";
+import {
+  FaAws,
+  FaDatabase,
+  FaMicrosoft,
+  FaServer,
+  FaTerminal,
+} from "react-icons/fa";
+import { TbBrandCSharp } from "react-icons/tb";
+import { IconType } from "react-icons";
 
 interface TechnologiesProps {
+  /** Whether dark mode is currently active */
   isDark: boolean;
 }
 
+interface Tech {
+  name: string;
+  icon: IconType;
+  color: string;
+}
+
+interface TechCategory {
+  id: string;
+  category: string;
+  techs: Tech[];
+}
+
 export default function Technologies({ isDark }: TechnologiesProps) {
-  const technologies = [
-    { name: "HTML5", icon: "🌐", level: 100 },
-    { name: "Git", icon: "🔧", level: 100 },
-    { name: "CSS3", icon: "🎨", level: 95 },
-    { name: "JavaScript", icon: "⚡", level: 95 },
-    { name: "TypeScript", icon: "📘", level: 95 },
-    { name: "React", icon: "⚛️", level: 95 },
-    { name: "Angular", icon: "🅰️", level: 70 },
-    { name: "Styled Components", icon: "🧵", level: 90 },
-    { name: "Next.js", icon: "🚀", level: 80 },
-    { name: "Node.js", icon: "🟢", level: 80 },
-    { name: "Database Management", icon: "🗄️", level: 80 },
-    { name: "GraphQL", icon: "🔗", level: 60 },
-    { name: "PostgreSQL", icon: "🐘", level: 60 },
-  ];
+  const { t, i18n } = useTranslation();
+  const currentLang = i18n.language;
+
+  const techStack: TechCategory[] = useMemo(
+    () => [
+      {
+        id: "languages",
+        category: t("tech.category.languages"),
+        techs: [
+          { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
+          { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
+          { name: "Python", icon: SiPython, color: "#3776AB" },
+          { name: "C#", icon: TbBrandCSharp, color: "#239120" },
+        ],
+      },
+      {
+        id: "frontend",
+        category: t("tech.category.frontend"),
+        techs: [
+          { name: "React", icon: SiReact, color: "#61DAFB" },
+          { name: "Angular", icon: SiAngular, color: "#DD0031" },
+          {
+            name: "Next.js",
+            icon: SiNextdotjs,
+            color: isDark ? "#FFFFFF" : "#000000",
+          },
+          { name: "Redux", icon: SiRedux, color: "#764ABC" },
+        ],
+      },
+      {
+        id: "styling",
+        category: t("tech.category.styling"),
+        techs: [
+          { name: "Bootstrap", icon: SiBootstrap, color: "#7952B3" },
+          { name: "TailwindCSS", icon: SiTailwindcss, color: "#06B6D4" },
+          { name: "AntDesign", icon: SiAntdesign, color: "#0170FE" },
+          { name: "Less", icon: SiLess, color: "#1D365D" },
+        ],
+      },
+      {
+        id: "backend",
+        category: t("tech.category.backend"),
+        techs: [{ name: "Node.js", icon: SiNodedotjs, color: "#339933" }],
+      },
+      {
+        id: "databases",
+        category: t("tech.category.databases"),
+        techs: [
+          { name: "MySQL", icon: SiMysql, color: "#4479A1" },
+          { name: "Postgres", icon: SiPostgresql, color: "#4169E1" },
+          { name: "SQLite", icon: SiSqlite, color: "#003B57" },
+          { name: "SQLServer", icon: FaDatabase, color: "#CC2927" },
+          { name: "Supabase", icon: SiSupabase, color: "#3ECF8E" },
+          { name: "Firebase", icon: SiFirebase, color: "#FFCA28" },
+        ],
+      },
+      {
+        id: "cloud",
+        category: t("tech.category.cloud"),
+        techs: [
+          { name: "AWS", icon: FaAws, color: "#FF9900" },
+          { name: "Azure", icon: FaMicrosoft, color: "#0078D4" },
+          { name: "Cloudflare", icon: SiCloudflare, color: "#F38020" },
+          {
+            name: "Vercel",
+            icon: SiVercel,
+            color: isDark ? "#FFFFFF" : "#000000",
+          },
+          { name: "Render", icon: FaServer, color: "#46E3B7" },
+        ],
+      },
+      {
+        id: "tools",
+        category: t("tech.category.tools"),
+        techs: [
+          { name: "Git", icon: SiGit, color: "#F05032" },
+          { name: "Vite", icon: SiVite, color: "#646CFF" },
+          { name: "PowerShell", icon: FaTerminal, color: "#5391FE" },
+        ],
+      },
+    ],
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [currentLang, isDark, t]
+  );
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -47,105 +183,109 @@ export default function Technologies({ isDark }: TechnologiesProps) {
   return (
     <section
       id="technologies"
-      className={`min-h-screen py-16 px-6 lg:px-12 transition-colors duration-300 rounded-2xl ${
-        isDark ? "bg-slate-800" : "bg-white"
+      className={`pb-32 transition-colors duration-300 ${
+        isDark ? "bg-black" : "bg-white"
       }`}
     >
       <motion.div
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, margin: "-100px" }}
-        className="max-w-6xl mx-auto p-8"
+        viewport={{ once: true, amount: 0.1 }}
       >
-        <motion.div variants={itemVariants} className="mb-12">
+        <motion.div variants={itemVariants} className="mb-4">
           <motion.h2
-            className={`text-3xl font-bold mb-4 transition-colors duration-300 ${
-              isDark ? "text-white" : "text-slate-900"
+            className={`text-2xl font-semibold transition-colors duration-300 ${
+              isDark ? "text-white" : "text-black"
             }`}
-            whileHover={{ x: 10 }}
           >
-            Technologies
+            {t("technologies.title")}
           </motion.h2>
-          <motion.div
-            className={`w-20 h-1 rounded-full transition-colors duration-300 ${
-              isDark ? "bg-amber-400" : "bg-blue-600"
-            }`}
-            initial={{ width: 0 }}
-            whileInView={{ width: 80 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-          />
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {technologies.map((tech, index) => (
+        <div className="space-y-6">
+          {techStack.map((category, catIndex) => (
             <motion.div
-              key={index}
+              key={category.id}
               variants={itemVariants}
-              whileHover={{ scale: 1.02, y: -5 }}
-              className={`group p-6 rounded-xl transition-all duration-300 cursor-pointer ${
-                isDark
-                  ? "bg-slate-600 hover:bg-slate-500 border border-slate-500 hover:border-amber-400/40"
-                  : "bg-slate-50 hover:bg-slate-100 border border-slate-200 hover:border-blue-600/40"
-              }`}
+              className="space-y-2"
             >
-              <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center space-x-3">
-                  <motion.div
-                    className="text-2xl"
-                    whileHover={{ scale: 1.2, rotate: 10 }}
-                  >
-                    {tech.icon}
-                  </motion.div>
-                  <motion.h3
-                    className={`font-semibold transition-colors duration-300 ${
-                      isDark
-                        ? "text-slate-200 group-hover:text-amber-400"
-                        : "text-slate-700 group-hover:text-blue-600"
-                    }`}
-                    whileHover={{ x: 5 }}
-                  >
-                    {tech.name}
-                  </motion.h3>
-                </div>
-                <motion.span
-                  className={`text-sm font-medium transition-colors duration-300 ${
-                    isDark ? "text-slate-400" : "text-slate-500"
-                  }`}
-                  whileHover={{ scale: 1.1 }}
-                >
-                  {tech.level}%
-                </motion.span>
-              </div>
-
-              <div
-                className={`w-full h-2 rounded-full transition-colors duration-300 ${
-                  isDark ? "bg-slate-600" : "bg-slate-200"
+              {/* Category Header */}
+              <motion.h3
+                className={`text-sm font-medium transition-colors duration-300 ${
+                  isDark ? "text-neutral-500" : "text-neutral-500"
                 }`}
+                whileHover={{ x: 3 }}
               >
-                <motion.div
-                  className={`h-full rounded-full transition-colors duration-300 ${
-                    isDark ? "bg-amber-400" : "bg-blue-600"
-                  }`}
-                  initial={{ width: 0 }}
-                  whileInView={{ width: `${tech.level}%` }}
-                  transition={{ duration: 1, delay: index * 0.1 }}
-                />
+                ▸ {category.category}/
+              </motion.h3>
+
+              {/* Technologies List */}
+              <div className="flex flex-wrap gap-x-6 gap-y-4">
+                {category.techs.map((tech, techIndex) => {
+                  const Icon = tech.icon;
+
+                  return (
+                    <motion.div
+                      key={tech.name}
+                      variants={itemVariants}
+                      whileHover={{
+                        y: -3,
+                        transition: { duration: 0.2 },
+                      }}
+                      className="group"
+                    >
+                      <div className="flex items-center gap-2">
+                        {/* Icon */}
+                        <motion.div
+                          whileHover={{
+                            rotate: [0, -5, 5, -5, 0],
+                            transition: { duration: 0.4 },
+                          }}
+                          className="flex-shrink-0"
+                        >
+                          <Icon size={18} style={{ color: tech.color }} />
+                        </motion.div>
+
+                        {/* Name */}
+                        <span
+                          className={`text-xs transition-colors duration-300 ${
+                            isDark ? "text-neutral-400" : "text-neutral-600"
+                          } group-hover:${isDark ? "text-white" : "text-black"}`}
+                        >
+                          {tech.name}
+                        </span>
+                      </div>
+
+                      {/* Minimal Progress Bar */}
+                      <motion.div
+                        className={`mt-1.5 h-0.5 rounded-full overflow-hidden ${
+                          isDark ? "bg-neutral-800" : "bg-neutral-200"
+                        }`}
+                        style={{ width: "110px" }}
+                      >
+                        <motion.div
+                          className="h-full rounded-full"
+                          style={{
+                            backgroundColor: tech.color,
+                          }}
+                          initial={{ width: 0 }}
+                          whileInView={{ width: "100%" }}
+                          transition={{
+                            duration: 1,
+                            delay: catIndex * 0.1 + techIndex * 0.05,
+                            ease: "easeOut",
+                          }}
+                          viewport={{ once: true, amount: 0.5 }}
+                        />
+                      </motion.div>
+                    </motion.div>
+                  );
+                })}
               </div>
             </motion.div>
           ))}
         </div>
-
-        <motion.div variants={itemVariants} className="mt-8 text-center">
-          <motion.p
-            className={`text-lg transition-colors duration-300 ${
-              isDark ? "text-slate-300" : "text-slate-600"
-            }`}
-            whileHover={{ scale: 1.05 }}
-          >
-            Always exploring new technologies and improving my skills
-          </motion.p>
-        </motion.div>
       </motion.div>
     </section>
   );
