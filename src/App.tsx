@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Home from "./pages/Home";
 import ProjectsPage from "./pages/ProjectsPage";
 import ContactPage from "./pages/ContactPage";
+import ResumePage from "./pages/ResumePage";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -19,7 +20,6 @@ function ScrollToTop() {
 function App() {
   const { isDark, toggleTheme } = useTheme();
 
-  // Apply background color to html element to prevent white bounce
   useEffect(() => {
     document.documentElement.style.backgroundColor = isDark
       ? "#000000"
@@ -39,6 +39,7 @@ function App() {
           <Route path="/" element={<Home isDark={isDark} />} />
           <Route path="/projects" element={<ProjectsPage isDark={isDark} />} />
           <Route path="/contact" element={<ContactPage isDark={isDark} />} />
+          <Route path="/resume" element={<ResumePage />} />
         </Routes>
       </div>
     </BrowserRouter>

@@ -8,6 +8,7 @@ const resources = {
       "nav.home": "/início",
       "nav.projects": "/projetos",
       "nav.contact": "/contato",
+      "nav.resume": "/curriculo",
 
       // About
       "about.title": "Otavio Zanon",
@@ -126,6 +127,7 @@ const resources = {
       "nav.home": "/home",
       "nav.projects": "/projects",
       "nav.contact": "/contact",
+      "nav.resume": "/resume",
 
       // About
       "about.title": "Otavio Zanon",

@@ -21,7 +21,7 @@
 import { Moon, Sun } from "lucide-react";
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail } from "lucide-react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 interface HeaderProps {
@@ -42,22 +42,16 @@ export default function Header({ isDark, toggleTheme }: HeaderProps) {
     i18n.changeLanguage(newLang);
   };
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   const isActive = (path: string) => {
     if (path === "/") return location.pathname === "/";
     return location.pathname === path;
   };
 
   const navItems = [
-    { path: "/", label: t("nav.home"), section: "about" },
-    { path: "/projects", label: t("nav.projects"), section: null },
-    { path: "/contact", label: t("nav.contact"), section: null },
+    { path: "/", label: t("nav.home") },
+    { path: "/projects", label: t("nav.projects") },
+    { path: "/contact", label: t("nav.contact") },
+    { path: "/resume", label: t("nav.resume") },
   ];
 
   const socialLinks = [
@@ -83,54 +77,29 @@ export default function Header({ isDark, toggleTheme }: HeaderProps) {
         <div className="flex items-center justify-between">
           {/* Navigation - Left */}
           <nav className="flex items-center gap-4">
-            {navItems.map((item, index) =>
-              item.path === "/" && item.section ? (
-                <motion.button
-                  key={item.label}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.3, delay: index * 0.05 }}
-                  onClick={() => {
-                    if (location.pathname !== "/") {
-                      navigate("/");
-                      setTimeout(() => scrollToSection(item.section!), 100);
-                    } else {
-                      scrollToSection(item.section!);
-                    }
-                  }}
-                  className={`text-xs transition-opacity duration-200 ${
-                    location.pathname === "/" && item.label === "/home"
-                      ? isDark
-                        ? "opacity-100"
-                        : "opacity-100"
-                      : isDark
-                        ? "opacity-50 hover:opacity-100"
-                        : "opacity-50 hover:opacity-100"
-                  } ${isDark ? "text-white" : "text-black"}`}
-                >
-                  {item.label}
-                </motion.button>
-              ) : (
-                <Link key={item.label} to={item.path}>
-                  <motion.span
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 0.3, delay: index * 0.05 }}
-                    className={`text-xs transition-opacity duration-200 ${
-                      isActive(item.path)
-                        ? isDark
-                          ? "opacity-100"
-                          : "opacity-100"
-                        : isDark
-                          ? "opacity-50 hover:opacity-100"
-                          : "opacity-50 hover:opacity-100"
-                    } ${isDark ? "text-white" : "text-black"}`}
-                  >
-                    {item.label}
-                  </motion.span>
-                </Link>
-              )
-            )}
+            {navItems.map((item, index) => (
+              <motion.button
+                key={item.label}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.3, delay: index * 0.05 }}
+                onClick={() => {
+                  if (location.pathname !== item.path) {
+                    navigate(item.path);
+                  }
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+                className={`text-xs transition-opacity duration-200 ${
+                  isActive(item.path)
+                    ? "opacity-100"
+                    : isDark
+                      ? "opacity-50 hover:opacity-100"
+                      : "opacity-50 hover:opacity-100"
+                } ${isDark ? "text-white" : "text-black"}`}
+              >
+                {item.label}
+              </motion.button>
+            ))}
           </nav>
 
           {/* Social Links + Theme Toggle - Right */}
