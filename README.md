@@ -2,6 +2,10 @@
 
 Minimalist terminal-inspired portfolio built with React, TypeScript, and modern web technologies.
 
+<p align="center">
+  <a href="https://otaviozanon.vercel.app/"><strong>Otavio Zanon Portifolio</strong></a>
+</p>
+
 ## 🚀 Features
 
 - Single Page Application with React Router
