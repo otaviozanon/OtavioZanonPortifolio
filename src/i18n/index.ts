@@ -46,6 +46,10 @@ const resources = {
       "projects.glampro.description":
         "Agendamento de serviços para profissionais de beleza",
 
+      "projects.otaviozanonresume.name": "Otavio Zanon Resume",
+      "projects.otaviozanonresume.description":
+        "Currículo interativo estilo terminal",
+
       "projects.settfile.name": "SettFile",
       "projects.settfile.description":
         "Upload de arquivos multi-provedor com rastreamento de progresso",
@@ -160,6 +164,10 @@ const resources = {
       "projects.glampro.description":
         "Service scheduling for beauty professionals",
 
+      "projects.otaviozanonresume.name": "Otavio Zanon Resume",
+      "projects.otaviozanonresume.description":
+        "Interactive terminal-style resume",
+
       "projects.settfile.name": "SettFile",
       "projects.settfile.description":
         "Multi-provider file uploader with progress tracking",
@@ -193,6 +201,9 @@ const resources = {
       "projects.worstfriend.name": "WorstFriend",
       "projects.worstfriend.description":
         "A true validator for the worst friend (Multiplayer)",
+
+      "projects.ventuno.name": "Ventuno",
+      "projects.ventuno.description": "Blackjack - 21 (Multiplayer)",
 
       "projects.blackjack.name": "Blackjack",
       "projects.blackjack.description": "Blackjack PRO (Solo)",

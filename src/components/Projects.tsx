@@ -35,6 +35,7 @@ import {
   SiCss,
   SiNodedotjs,
   SiSocketdotio,
+  SiPython,
 } from "react-icons/si";
 import { TbBrandCSharp, TbBrandPowershell } from "react-icons/tb";
 import { IconType } from "react-icons";
@@ -100,17 +101,23 @@ export default function Projects({ isDark }: ProjectsProps) {
             liveUrl: "https://escola123.com.br",
           },
           {
+            name: t("projects.otaviozanonresume.name"),
+            description: t("projects.otaviozanonresume.description"),
+            tech: [
+              { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
+              { name: "HTML5", icon: SiHtml5, color: "#E34F26" },
+              { name: "CSS3", icon: SiCss, color: "#1572B6" },
+            ],
+            liveUrl: "https://otaviozanonresume.vercel.app",
+            githubUrl: "https://github.com/otaviozanon/OtavioZanonResume",
+          },
+          {
             name: t("projects.glampro.name"),
             description: t("projects.glampro.description"),
             tech: [
               { name: "React", icon: SiReact, color: "#61DAFB" },
-              {
-                name: "Next.js",
-                icon: SiNextdotjs,
-                color: isDark ? "#FFFFFF" : "#000000",
-              },
-              { name: "TailwindCSS", icon: SiTailwindcss, color: "#06B6D4" },
               { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
+              { name: "TailwindCSS", icon: SiTailwindcss, color: "#06B6D4" },
             ],
             githubUrl: "https://github.com/otaviozanon/GlamPro",
           },
@@ -124,6 +131,7 @@ export default function Projects({ isDark }: ProjectsProps) {
             name: t("projects.esportcalendar.name"),
             description: t("projects.esportcalendar.description"),
             tech: [
+              { name: "Python", icon: SiPython, color: "#3776AB" },
               { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
               { name: "HTML5", icon: SiHtml5, color: "#E34F26" },
               { name: "CSS3", icon: SiCss, color: "#1572B6" },
@@ -135,6 +143,7 @@ export default function Projects({ isDark }: ProjectsProps) {
             name: t("projects.livewatch.name"),
             description: t("projects.livewatch.description"),
             tech: [
+              { name: "Python", icon: SiPython, color: "#3776AB" },
               { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
               { name: "HTML5", icon: SiHtml5, color: "#E34F26" },
               { name: "CSS3", icon: SiCss, color: "#1572B6" },
@@ -146,9 +155,8 @@ export default function Projects({ isDark }: ProjectsProps) {
             name: t("projects.settpaste.name"),
             description: t("projects.settpaste.description"),
             tech: [
-              { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
-              { name: "HTML5", icon: SiHtml5, color: "#E34F26" },
-              { name: "CSS3", icon: SiCss, color: "#1572B6" },
+              { name: "React", icon: SiReact, color: "#61DAFB" },
+              { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
             ],
             liveUrl: "http://settpaste.vercel.app",
             githubUrl: "https://github.com/otaviozanon/settpaste",
