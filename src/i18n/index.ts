@@ -81,6 +81,9 @@ const resources = {
       "projects.worstfriend.description":
         "Um verdadeiro validador para o amigo mais m* (Multiplayer)",
 
+      "projects.ventuno.name": "Ventuno",
+      "projects.ventuno.description": "Blackjack - 21 (Multiplayer)",
+
       "projects.blackjack.name": "Blackjack",
       "projects.blackjack.description": "Blackjack PRO (Solo)",
 

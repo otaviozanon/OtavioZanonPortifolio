@@ -251,6 +251,22 @@ export default function Projects({ isDark }: ProjectsProps) {
             githubUrl: "https://github.com/otaviozanon/WorstFriend",
           },
           {
+            name: t("projects.ventuno.name"),
+            description: t("projects.ventuno.description"),
+            tech: [
+              { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
+              {
+                name: "Next.js",
+                icon: SiNextdotjs,
+                color: isDark ? "#FFFFFF" : "#000000",
+              },
+              { name: "Socket.io", icon: SiSocketdotio, color: "#010101" },
+              { name: "TailwindCSS", icon: SiTailwindcss, color: "#06B6D4" },
+            ],
+            liveUrl: "http://ventunogame.onrender.com",
+            githubUrl: "https://github.com/otaviozanon/Ventuno",
+          },
+          {
             name: t("projects.blackjack.name"),
             description: t("projects.blackjack.description"),
             tech: [
