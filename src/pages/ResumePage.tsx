@@ -14,7 +14,7 @@ export default function ResumePage() {
         src="https://otaviozanonresume.vercel.app"
         title="Resume"
         className="w-full h-full border-none block"
-        sandbox="allow-scripts allow-same-origin"
+        sandbox="allow-scripts allow-same-origin allow-popups"
       />
     </motion.main>
   );
