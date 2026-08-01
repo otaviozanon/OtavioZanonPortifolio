@@ -45,4 +45,8 @@ src/
 - GitHub: [@otaviozanon](https://github.com/otaviozanon)
 - Email: otaviozanonn@icloud.com
 
+## 📄 License
+
+GPL-3.0. See [LICENSE](/LICENSE).
+
 ---
