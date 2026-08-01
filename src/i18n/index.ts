@@ -92,6 +92,9 @@ const resources = {
       "projects.blackjack.name": "Blackjack",
       "projects.blackjack.description": "Blackjack PRO (Solo)",
 
+      "projects.lantern.name": "Lantern",
+      "projects.lantern.description": "Roll & Write Adventure (Solo)",
+
       // Technologies
       "technologies.title": "Tecnologias",
 

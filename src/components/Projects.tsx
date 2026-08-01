@@ -285,6 +285,17 @@ export default function Projects({ isDark }: ProjectsProps) {
             liveUrl: "http://blackjack-pro-seven.vercel.app",
             githubUrl: "https://github.com/otaviozanon/Blackjack",
           },
+          {
+            name: t("projects.lantern.name"),
+            description: t("projects.lantern.description"),
+            tech: [
+              { name: "React", icon: SiReact, color: "#61DAFB" },
+              { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
+              { name: "TailwindCSS", icon: SiTailwindcss, color: "#06B6D4" },
+            ],
+            liveUrl: "https://lanterngame.vercel.app",
+            githubUrl: "https://github.com/otaviozanon/Lantern",
+          },
         ],
       },
     ],
