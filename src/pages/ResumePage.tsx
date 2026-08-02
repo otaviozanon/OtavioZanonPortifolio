@@ -7,8 +7,7 @@ export default function ResumePage() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.3 }}
-      className="bg-[#0d1117]"
-      style={{ height: "calc(100vh - 4rem)", marginTop: "4rem" }}
+      className="bg-[#0d1117] min-h-dvh pt-16"
     >
       <iframe
         src="https://otaviozanonresume.vercel.app"

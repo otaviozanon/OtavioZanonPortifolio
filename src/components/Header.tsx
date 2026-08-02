@@ -73,10 +73,10 @@ export default function Header({ isDark, toggleTheme }: HeaderProps) {
         isDark ? "bg-black/80" : "bg-white/80"
       } backdrop-blur-sm`}
     >
-      <div className="max-w-5xl mx-auto px-6 py-4">
-        <div className="flex items-center justify-between">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
+        <div className="flex items-center justify-between gap-2">
           {/* Navigation - Left */}
-          <nav className="flex items-center gap-4">
+          <nav className="flex items-center gap-2 sm:gap-4 flex-wrap">
             {navItems.map((item, index) => (
               <motion.button
                 key={item.label}
@@ -103,7 +103,7 @@ export default function Header({ isDark, toggleTheme }: HeaderProps) {
           </nav>
 
           {/* Social Links + Theme Toggle - Right */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
             {socialLinks.map((social, index) => (
               <motion.a
                 key={social.label}

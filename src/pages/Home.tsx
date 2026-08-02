@@ -13,11 +13,11 @@ export default function Home({ isDark }: HomeProps) {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -20 }}
       transition={{ duration: 0.4 }}
-      className={`min-h-screen transition-colors duration-300 ${
+      className={`min-h-dvh transition-colors duration-300 ${
         isDark ? "bg-black" : "bg-white"
       }`}
     >
-      <div className="max-w-5xl mx-auto px-6 pt-24">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 pt-16 sm:pt-24">
         <About isDark={isDark} />
         <Technologies isDark={isDark} />
       </div>

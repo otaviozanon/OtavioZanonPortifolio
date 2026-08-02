@@ -30,7 +30,7 @@ function App() {
     <BrowserRouter>
       <ScrollToTop />
       <div
-        className={`min-h-screen transition-colors duration-300 ${
+        className={`min-h-dvh transition-colors duration-300 ${
           isDark ? "bg-black" : "bg-white"
         }`}
       >
