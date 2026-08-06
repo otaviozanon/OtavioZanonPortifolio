@@ -36,8 +36,8 @@ import {
   SiNodedotjs,
   SiSocketdotio,
   SiPython,
-  SiVisualstudiocode,
 } from "react-icons/si";
+import { VscVscode } from "react-icons/vsc";
 import { TbBrandCSharp, TbBrandPowershell } from "react-icons/tb";
 import { IconType } from "react-icons";
 
@@ -178,7 +178,7 @@ export default function Projects({ isDark }: ProjectsProps) {
             name: t("projects.settheme.name"),
             description: t("projects.settheme.description"),
             tech: [
-              { name: "VS Code", icon: SiVisualstudiocode, color: "#007ACC" },
+              { name: "VS Code", icon: VscVscode, color: "#007ACC" },
               { name: "JSON", icon: SiNodedotjs, color: "#F0DB4F" },
             ],
             githubUrl: "https://github.com/otaviozanon/SettTheme",
