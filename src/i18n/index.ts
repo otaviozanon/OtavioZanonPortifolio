@@ -55,6 +55,10 @@ const resources = {
       "projects.settfile.description":
         "Upload de arquivos multi-provedor com rastreamento de progresso",
 
+      "projects.settheme.name": "SETT Theme",
+      "projects.settheme.description":
+        "Tema dark para VS Code com destaque dourado em operadores e keywords",
+
       "projects.esportcalendar.name": "EsportCalendar",
       "projects.esportcalendar.description":
         "Gerador automático de calendário de esports em formato .ics. Rastreia partidas de CS2, Valorant, LOL e Rocket League de times brasileiros",
@@ -176,6 +180,10 @@ const resources = {
       "projects.settfile.name": "SettFile",
       "projects.settfile.description":
         "Multi-provider file uploader with progress tracking",
+
+      "projects.settheme.name": "SETT Theme",
+      "projects.settheme.description":
+        "Dark VS Code theme with golden highlights for operators and keywords",
 
       "projects.esportcalendar.name": "EsportCalendar",
       "projects.esportcalendar.description":
