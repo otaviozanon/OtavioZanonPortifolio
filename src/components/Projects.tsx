@@ -183,6 +183,19 @@ export default function Projects({ isDark }: ProjectsProps) {
             ],
             githubUrl: "https://github.com/otaviozanon/SettTheme",
           },
+          {
+            name: t("projects.settvpn.name"),
+            description: t("projects.settvpn.description"),
+            tech: [
+              {
+                name: "PowerShell",
+                icon: TbBrandPowershell,
+                color: "#5391FE",
+              },
+              { name: "C#", icon: TbBrandCSharp, color: "#239120" },
+            ],
+            githubUrl: "https://github.com/otaviozanon/SettVPN",
+          },
         ],
       },
       {

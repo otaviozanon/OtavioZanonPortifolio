@@ -59,6 +59,10 @@ const resources = {
       "projects.settheme.description":
         "Tema dark para VS Code com destaque dourado em operadores e keywords",
 
+      "projects.settvpn.name": "SETT VPN",
+      "projects.settvpn.description":
+        "Cliente VPN gratuito para Windows. Busca servidores grátis automaticamente, conecta via v2ray-core embutido e expõe proxy SOCKS5",
+
       "projects.esportcalendar.name": "EsportCalendar",
       "projects.esportcalendar.description":
         "Gerador automático de calendário de esports em formato .ics. Rastreia partidas de CS2, Valorant, LOL e Rocket League de times brasileiros",
@@ -184,6 +188,10 @@ const resources = {
       "projects.settheme.name": "SETT Theme",
       "projects.settheme.description":
         "Dark VS Code theme with golden highlights for operators and keywords",
+
+      "projects.settvpn.name": "SETT VPN",
+      "projects.settvpn.description":
+        "Free VPN client for Windows. Auto-fetches free server configs, connects via embedded v2ray-core and exposes a SOCKS5 proxy",
 
       "projects.esportcalendar.name": "EsportCalendar",
       "projects.esportcalendar.description":
