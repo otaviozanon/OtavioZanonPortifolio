@@ -184,17 +184,15 @@ export default function Projects({ isDark }: ProjectsProps) {
             githubUrl: "https://github.com/otaviozanon/SettTheme",
           },
           {
-            name: t("projects.settvpn.name"),
-            description: t("projects.settvpn.description"),
+            name: t("projects.settutilityextension.name"),
+            description: t("projects.settutilityextension.description"),
             tech: [
-              {
-                name: "PowerShell",
-                icon: TbBrandPowershell,
-                color: "#5391FE",
-              },
-              { name: "C#", icon: TbBrandCSharp, color: "#239120" },
+              { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
+              { name: "HTML5", icon: SiHtml5, color: "#E34F26" },
+              { name: "CSS3", icon: SiCss, color: "#1572B6" },
             ],
-            githubUrl: "https://github.com/otaviozanon/SettVPN",
+            githubUrl:
+              "https://github.com/otaviozanon/SETTUtilityExtension",
           },
         ],
       },
@@ -226,6 +224,31 @@ export default function Projects({ isDark }: ProjectsProps) {
               },
             ],
             githubUrl: "https://github.com/otaviozanon/SETTMemoryCleaner",
+          },
+          {
+            name: t("projects.settvpn.name"),
+            description: t("projects.settvpn.description"),
+            tech: [
+              {
+                name: "PowerShell",
+                icon: TbBrandPowershell,
+                color: "#5391FE",
+              },
+              { name: "C#", icon: TbBrandCSharp, color: "#239120" },
+            ],
+            githubUrl: "https://github.com/otaviozanon/SettVPN",
+          },
+          {
+            name: t("projects.settdash.name"),
+            description: t("projects.settdash.description"),
+            tech: [
+              {
+                name: "PowerShell",
+                icon: TbBrandPowershell,
+                color: "#5391FE",
+              },
+            ],
+            githubUrl: "https://github.com/otaviozanon/SETTDash",
           },
         ],
       },

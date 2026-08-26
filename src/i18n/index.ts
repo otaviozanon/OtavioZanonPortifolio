@@ -63,6 +63,14 @@ const resources = {
       "projects.settvpn.description":
         "Cliente VPN gratuito para Windows. Busca servidores grátis automaticamente, conecta via v2ray-core embutido e expõe proxy SOCKS5",
 
+      "projects.settutilityextension.name": "SETTUtilityExtension",
+      "projects.settutilityextension.description":
+        "Extensão de navegador tudo-em-um: amplificador de volume, limpeza de cache, abertura de múltiplas URLs e melhorias no YouTube",
+
+      "projects.settdash.name": "SETTDash",
+      "projects.settdash.description":
+        "Dashboard de otimização e ajustes do Windows — limpeza de cache, otimizador de rede, tweaks, game mode, privacidade, serviços e ferramentas de GPU/CPU numa interface WPF dark",
+
       "projects.esportcalendar.name": "EsportCalendar",
       "projects.esportcalendar.description":
         "Gerador automático de calendário de esports em formato .ics. Rastreia partidas de CS2, Valorant, LOL e Rocket League de times brasileiros",
@@ -192,6 +200,14 @@ const resources = {
       "projects.settvpn.name": "SETT VPN",
       "projects.settvpn.description":
         "Free VPN client for Windows. Auto-fetches free server configs, connects via embedded v2ray-core and exposes a SOCKS5 proxy",
+
+      "projects.settutilityextension.name": "SETTUtilityExtension",
+      "projects.settutilityextension.description":
+        "All-in-one browser utility extension: volume booster, cache cleaner, multi-URL opener and YouTube enhancements",
+
+      "projects.settdash.name": "SETTDash",
+      "projects.settdash.description":
+        "All-in-one Windows optimization & tweaking dashboard — cache cleaner, network optimizer, system tweaks, game mode, privacy, services, GPU/CPU tools and more, in a single dark WPF interface",
 
       "projects.esportcalendar.name": "EsportCalendar",
       "projects.esportcalendar.description":
