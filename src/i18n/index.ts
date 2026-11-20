@@ -71,6 +71,10 @@ const resources = {
       "projects.settdash.description":
         "Dashboard de otimização e ajustes do Windows — limpeza de cache, otimizador de rede, tweaks, game mode, privacidade, serviços e ferramentas de GPU/CPU numa interface WPF dark",
 
+      "projects.settmetter.name": "SETTMetter",
+      "projects.settmetter.description":
+        "Monitor de bateria de dispositivos sem fio e do sistema (CPU/RAM/GPU/VRAM/temperaturas) na barra de tarefas do Windows 11",
+
       "projects.esportcalendar.name": "EsportCalendar",
       "projects.esportcalendar.description":
         "Gerador automático de calendário de esports em formato .ics. Rastreia partidas de CS2, Valorant, LOL e Rocket League de times brasileiros",
@@ -82,10 +86,6 @@ const resources = {
       "projects.settpaste.name": "SettPaste",
       "projects.settpaste.description":
         "Bloco de notas online para criar e compartilhar código ou o que você quiser",
-
-      "projects.settutility.name": "SettUtility",
-      "projects.settutility.description":
-        "Kit de ferramentas de otimização do Windows e performance para jogos",
 
       "projects.settmemorycleaner.name": "SETTMemoryCleaner",
       "projects.settmemorycleaner.description":
@@ -110,6 +110,10 @@ const resources = {
 
       "projects.lantern.name": "Lantern",
       "projects.lantern.description": "Roll & Write Adventure (Solo)",
+
+      "projects.aimsett.name": "AimSETT",
+      "projects.aimsett.description":
+        "Aim trainer no navegador com 3 modos (Flicking, Tracking, Speed), HUD em tempo real e análise de desempenho pós-partida",
 
       // Technologies
       "technologies.title": "Tecnologias",
@@ -209,6 +213,10 @@ const resources = {
       "projects.settdash.description":
         "All-in-one Windows optimization & tweaking dashboard — cache cleaner, network optimizer, system tweaks, game mode, privacy, services, GPU/CPU tools and more, in a single dark WPF interface",
 
+      "projects.settmetter.name": "SETTMetter",
+      "projects.settmetter.description":
+        "Wireless device battery levels and system monitoring (CPU/RAM/GPU/VRAM/temperatures) on the Windows 11 taskbar",
+
       "projects.esportcalendar.name": "EsportCalendar",
       "projects.esportcalendar.description":
         "Automatic esport calendar generator in .ics format. Tracks matches from CS2, Valorant, LOL and Rocket League from Brazilian teams",
@@ -220,10 +228,6 @@ const resources = {
       "projects.settpaste.name": "SettPaste",
       "projects.settpaste.description":
         "Online notepad to create and share code or what you want",
-
-      "projects.settutility.name": "SettUtility",
-      "projects.settutility.description":
-        "Windows optimization and gaming performance toolkit and extension",
 
       "projects.settmemorycleaner.name": "SETTMemoryCleaner",
       "projects.settmemorycleaner.description":
@@ -244,6 +248,13 @@ const resources = {
 
       "projects.blackjack.name": "Blackjack",
       "projects.blackjack.description": "Blackjack PRO (Solo)",
+
+      "projects.lantern.name": "Lantern",
+      "projects.lantern.description": "Roll & Write Adventure (Solo)",
+
+      "projects.aimsett.name": "AimSETT",
+      "projects.aimsett.description":
+        "Browser-based aim trainer with 3 modes (Flicking, Tracking, Speed), a real-time HUD and post-match performance analysis",
 
       // Technologies
       "technologies.title": "Technologies",

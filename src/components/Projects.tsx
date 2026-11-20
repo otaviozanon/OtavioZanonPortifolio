@@ -36,6 +36,9 @@ import {
   SiNodedotjs,
   SiSocketdotio,
   SiPython,
+  SiRust,
+  SiVite,
+  SiJson,
 } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 import { TbBrandCSharp, TbBrandPowershell } from "react-icons/tb";
@@ -179,7 +182,7 @@ export default function Projects({ isDark }: ProjectsProps) {
             description: t("projects.settheme.description"),
             tech: [
               { name: "VS Code", icon: VscVscode, color: "#007ACC" },
-              { name: "JSON", icon: SiNodedotjs, color: "#F0DB4F" },
+              { name: "JSON", icon: SiJson, color: "#F0DB4F" },
             ],
             githubUrl: "https://github.com/otaviozanon/SettTheme",
           },
@@ -201,8 +204,8 @@ export default function Projects({ isDark }: ProjectsProps) {
         category: t("projects.category.desktop-utils"),
         projects: [
           {
-            name: t("projects.settutility.name"),
-            description: t("projects.settutility.description"),
+            name: t("projects.settdash.name"),
+            description: t("projects.settdash.description"),
             tech: [
               {
                 name: "PowerShell",
@@ -210,7 +213,7 @@ export default function Projects({ isDark }: ProjectsProps) {
                 color: "#5391FE",
               },
             ],
-            githubUrl: "https://github.com/otaviozanon/SettUtility",
+            githubUrl: "https://github.com/otaviozanon/SETTDash",
           },
           {
             name: t("projects.settmemorycleaner.name"),
@@ -239,16 +242,10 @@ export default function Projects({ isDark }: ProjectsProps) {
             githubUrl: "https://github.com/otaviozanon/SettVPN",
           },
           {
-            name: t("projects.settdash.name"),
-            description: t("projects.settdash.description"),
-            tech: [
-              {
-                name: "PowerShell",
-                icon: TbBrandPowershell,
-                color: "#5391FE",
-              },
-            ],
-            githubUrl: "https://github.com/otaviozanon/SETTDash",
+            name: t("projects.settmetter.name"),
+            description: t("projects.settmetter.description"),
+            tech: [{ name: "Rust", icon: SiRust, color: "#DEA584" }],
+            githubUrl: "https://github.com/otaviozanon/SETTMetter",
           },
         ],
       },
@@ -341,6 +338,17 @@ export default function Projects({ isDark }: ProjectsProps) {
             ],
             liveUrl: "https://lanterngame.vercel.app",
             githubUrl: "https://github.com/otaviozanon/Lantern",
+          },
+          {
+            name: t("projects.aimsett.name"),
+            description: t("projects.aimsett.description"),
+            tech: [
+              { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
+              { name: "React", icon: SiReact, color: "#61DAFB" },
+              { name: "Vite", icon: SiVite, color: "#646CFF" },
+            ],
+            liveUrl: "https://aimsett.vercel.app",
+            githubUrl: "https://github.com/otaviozanon/AimSETT",
           },
         ],
       },
