@@ -61,7 +61,7 @@ const resources = {
 
       "projects.settvpn.name": "SETT VPN",
       "projects.settvpn.description":
-        "Cliente VPN gratuito para Windows. Busca servidores grátis automaticamente, conecta via v2ray-core embutido e expõe proxy SOCKS5",
+        "Cliente VPN gratuito para Windows. Busca servidores grátis automaticamente, conecta via Xray-core embutido e expõe proxy SOCKS5",
 
       "projects.settutilityextension.name": "SETTUtilityExtension",
       "projects.settutilityextension.description":
@@ -203,7 +203,7 @@ const resources = {
 
       "projects.settvpn.name": "SETT VPN",
       "projects.settvpn.description":
-        "Free VPN client for Windows. Auto-fetches free server configs, connects via embedded v2ray-core and exposes a SOCKS5 proxy",
+        "Free VPN client for Windows. Auto-fetches free server configs, connects via embedded Xray-core and exposes a SOCKS5 proxy",
 
       "projects.settutilityextension.name": "SETTUtilityExtension",
       "projects.settutilityextension.description":
