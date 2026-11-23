@@ -75,6 +75,10 @@ const resources = {
       "projects.settmetter.description":
         "Monitor de bateria de dispositivos sem fio e do sistema (CPU/RAM/GPU/VRAM/temperaturas) na barra de tarefas do Windows 11",
 
+      "projects.settconverter.name": "SETTConverter",
+      "projects.settconverter.description":
+        "Conversor de arquivos portátil para Windows pelo menu de contexto do Explorer — imagem, PDF, vídeo, áudio, documento, fonte e arquivo, baixando FFmpeg e 7-Zip automaticamente quando necessário",
+
       "projects.esportcalendar.name": "EsportCalendar",
       "projects.esportcalendar.description":
         "Gerador automático de calendário de esports em formato .ics. Rastreia partidas de CS2, Valorant, LOL e Rocket League de times brasileiros",
@@ -216,6 +220,10 @@ const resources = {
       "projects.settmetter.name": "SETTMetter",
       "projects.settmetter.description":
         "Wireless device battery levels and system monitoring (CPU/RAM/GPU/VRAM/temperatures) on the Windows 11 taskbar",
+
+      "projects.settconverter.name": "SETTConverter",
+      "projects.settconverter.description":
+        "Portable Windows file converter with an Explorer context menu — image, PDF, video, audio, document, font and archive, fetching FFmpeg and 7-Zip automatically when needed",
 
       "projects.esportcalendar.name": "EsportCalendar",
       "projects.esportcalendar.description":

@@ -247,6 +247,12 @@ export default function Projects({ isDark }: ProjectsProps) {
             tech: [{ name: "Rust", icon: SiRust, color: "#DEA584" }],
             githubUrl: "https://github.com/otaviozanon/SETTMetter",
           },
+          {
+            name: t("projects.settconverter.name"),
+            description: t("projects.settconverter.description"),
+            tech: [{ name: "Rust", icon: SiRust, color: "#DEA584" }],
+            githubUrl: "https://github.com/otaviozanon/SETTConverter",
+          },
         ],
       },
       {
